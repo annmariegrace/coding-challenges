@@ -8,10 +8,10 @@ let currentPlayer = 0;
 document.addEventListener('click', (e) => {
     let currentSquare = e.target;
     if(e.target.className === 'square' && currentPlayer === 0) {
-        currentSquare.innerHTML = 'X';
+        currentSquare.textContent = 'X';
         currentPlayer ++;
-    }else {
-        currentSquare.innerHTML = 'O';
+    }else if (e.target.className === 'square') {
+        currentSquare.textContent = 'O';
         currentPlayer = 0;
     }
 });
